@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="Play Flappy Bird for free online — the classic arcade game recreated as a beautiful HTML5 web app. Tap or click to fly!">
+  <title>Play Flappy Bird</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-title">
+        <span class="loading-flappy">FLAPPY</span>
+        <span class="loading-bird">BIRD</span>
+      </div>
+      <div class="loading-bar-container">
+        <div class="loading-bar" id="loading-bar"></div>
+        <div class="loading-shine"></div>
+      </div>
+      <p class="loading-text">Loading...</p>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="brand-icon">🐦</span>
+        <h1>ANTE KUNDI NAAYE</h1>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Game</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Game Container -->
+  <main class="game-container" id="game-container">
+    <div id="game-wrapper">
+      <div class="score-container">
+        <div id="bestScore">Best : 0</div>
+        <div id="currentScore">Score : 0</div>
+      </div>
+      <canvas id="game-canvas" width="431" height="768"></canvas>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Inspired by the original Flappy Bird by Dong Nguyen &bull; Built with HTML5 Canvas</p>
+  </footer>
+
+  <script src="game.js"></script>
+</body>
+</html>
