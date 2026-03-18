@@ -13,10 +13,10 @@
 
   // ---- Game Settings (SLOW & GENTLE) ----
   let gamePlaying = false;
-  const gravity = 0.25;
-  const speed = 2.5;
+  const gravity = 0.18;
+  const speed = 2.0;
   const size = [51, 36];
-  const jump = -7.0;
+  const jump = -5.7;
   const cTenth = (canvas.width / 10);
 
   let index = 0,

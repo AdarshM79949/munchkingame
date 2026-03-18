@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="Play Duck Hunt — the classic retro NES game recreated in HTML5 Canvas. Shoot the ducks!">
+  <title>Play Duck Hunt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .duck-hunt-frame {
+      width: 100%;
+      max-width: 790px;
+      height: 780px;
+      border: none;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.45), 0 0 60px rgba(255,150,50,0.08);
+      background: #000;
+      display: block;
+      margin: 0 auto;
+    }
+    .game-container {
+      padding-top: 90px;
+      min-height: calc(100vh - 60px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .duck-hunt-title {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 22px;
+      color: #ff9c39;
+      text-align: center;
+      margin: 24px 0 6px;
+      text-shadow: 0 0 18px rgba(255,156,57,0.5);
+      letter-spacing: 2px;
+    }
+    .duck-hunt-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #aaa;
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    .duck-hunt-subtitle .credit {
+      color: #47dd24;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar visible" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <span class="brand-icon">🦆</span>
+        <h1>ANTE KUNDI NAAYE</h1>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Flappy Bird</a></li>
+        <li><a href="duckhunt.html" class="active">Duck Hunt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Game Container -->
+  <main class="game-container" id="game-container">
+    <h2 class="duck-hunt-title">🦆 DUCK HUNT 🔫</h2>
+    <p class="duck-hunt-subtitle">Classic retro shooter — click to hunt! &bull; Curated by <span class="credit">Stan</span></p>
+    <iframe class="duck-hunt-frame" src="duck-hunt/index.html" title="Duck Hunt Game" allowfullscreen></iframe>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Duck Hunt — Original game by Nintendo &bull; HTML5 recreation by Adi52 &bull; Curated by Stan</p>
+  </footer>
+
+  <script>
+    // Navbar toggle
+    const navToggle = document.getElementById("nav-toggle");
+    const navLinks = document.getElementById("nav-links");
+    if (navToggle) {
+      navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+      });
+    }
+  </script>
+</body>
+</html>
